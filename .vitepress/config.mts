@@ -47,24 +47,24 @@ export default defineConfig({
     returnToTopLabel: '回到顶部 ▲'
   },
 
-  transformHead({ assets }) {
-    // adjust the regex accordingly to match your font
-    const HarmonySansFile = assets.find(() => /HarmonyOS_Sans_SC\.woff2/)
-    if (HarmonySansFile) {
-      return [
-        [
-          'link',
-          {
-            rel: 'preload',
-            href: HarmonySansFile,
-            as: 'font',
-            type: 'font/woff2',
-            crossorigin: ''
-          }
-        ]
-      ]
-    }
-  },
+  // transformHead({ assets }) {
+  //   // adjust the regex accordingly to match your font
+  //   const HarmonySansFile = assets.find(() => /HarmonyOS_Sans_SC\.woff2/)
+  //   if (HarmonySansFile) {
+  //     return [
+  //       [
+  //         'link',
+  //         {
+  //           rel: 'preload',
+  //           href: HarmonySansFile,
+  //           as: 'font',
+  //           type: 'font/woff2',
+  //           crossorigin: ''
+  //         }
+  //       ]
+  //     ]
+  //   }
+  // },
 
   markdown: {
     theme: {
