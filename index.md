@@ -6,7 +6,7 @@ hero:
   name: 桦木原
   text: Harmoland
   tagline: 一个小众的原版服务器
-  image: /home_logo.png
+  image: /home_logo.webp
   actions:
     - theme: brand
       text: 加入我们
