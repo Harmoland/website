@@ -35,8 +35,9 @@ import type { RenderRule } from 'markdown-it/lib/renderer.mts'
 import container from 'markdown-it-container'
 
 export const containerPlugin = (md: MarkdownIt) => {
-  md.use(...createContainer('interlink', '相关链接', md))
-    .use(...createContainer('tsukkomi', '吐槽', md))
+  md.use(...createContainer('interlink', '相关链接', md)).use(
+    ...createContainer('tsukkomi', '吐槽', md)
+  )
 }
 
 type ContainerArgs = [typeof container, string, { render: RenderRule }]

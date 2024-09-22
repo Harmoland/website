@@ -10,15 +10,7 @@ import eslintConfigPrettier from 'eslint-config-prettier'
 
 export default [
   {
-    ignores: [
-      'eslint.config.mjs',
-      'auto-imports.d.ts',
-      'components.d.ts',
-      'web-ext.config.ts',
-      'node_modules/*',
-      '.output/*',
-      '.wxt/*'
-    ]
+    ignores: ['eslint.config.mjs', 'node_modules/*', '.vitepress/dist', '.vitepress/cache']
   },
   eslint.configs.recommended,
   ...pluginVue.configs['flat/recommended'],

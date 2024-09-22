@@ -8,7 +8,8 @@ withDefaults(
   }>(),
   {
     theme: 'brand',
-    target: '_blank'
+    target: '_blank',
+    href: '#'
   }
 )
 </script>
