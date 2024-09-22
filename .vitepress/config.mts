@@ -24,15 +24,15 @@ export default defineConfig({
     nav,
     sidebar,
 
-    // editLink: {
-    //   pattern: 'https://github.com/GraiaCommunity/Docs/edit/remake/docs/:path',
-    //   text: '在 GitHub 上编辑此页'
-    // },
-    // socialLinks: [{ icon: 'github', link: 'https://github.com/GraiaCommunity/Docs' }],
-    // footer: {
-    //   // message: 'MIT License',
-    //   copyright: 'Copyright © 2024 桦木原Harmoland'
-    // },
+    editLink: {
+      pattern: 'https://github.com/Harmoland/webiste/edit/remake/docs/:path',
+      text: '在 GitHub 上编辑此页'
+    },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/Harmoland/webiste' }],
+    footer: {
+      // message: 'MIT License',
+      copyright: 'Copyright © 2024 桦木原Harmoland'
+    },
     outline: {
       level: [2, 3],
       label: '本页大纲'
@@ -47,25 +47,6 @@ export default defineConfig({
     returnToTopLabel: '回到顶部 ▲'
   },
 
-  // transformHead({ assets }) {
-  //   // adjust the regex accordingly to match your font
-  //   const HarmonySansFile = assets.find(() => /HarmonyOS_Sans_SC\.woff2/)
-  //   if (HarmonySansFile) {
-  //     return [
-  //       [
-  //         'link',
-  //         {
-  //           rel: 'preload',
-  //           href: HarmonySansFile,
-  //           as: 'font',
-  //           type: 'font/woff2',
-  //           crossorigin: ''
-  //         }
-  //       ]
-  //     ]
-  //   }
-  // },
-
   markdown: {
     theme: {
       light: 'min-light',
@@ -73,5 +54,23 @@ export default defineConfig({
     },
     lineNumbers: true,
     config: mdEnhance
+  },
+  transformHead({ assets }) {
+    // adjust the regex accordingly to match your font
+    const HarmonySansFile = assets.find(() => /.+\.woff2/)
+    if (HarmonySansFile) {
+      return [
+        [
+          'link',
+          {
+            rel: 'preload',
+            href: HarmonySansFile,
+            as: 'font',
+            type: 'font/woff2',
+            crossorigin: ''
+          }
+        ]
+      ]
+    }
   }
 })

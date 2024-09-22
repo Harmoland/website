@@ -5,6 +5,19 @@
 
 @import './code-group.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --vp-font-family-base: 'HarmonyOS Sans SC', ui-sans-serif, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Microsoft YaHei,
+    sans-serif;
+  --vp-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, 'Cascadia Mono PL',
+    'Cascadia Code PL', 'Cascadia Mono', 'Cascadia Code', Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+}
+
 /**
  * Colors
  *
