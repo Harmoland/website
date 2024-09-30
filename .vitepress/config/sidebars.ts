@@ -11,6 +11,8 @@ const sidebar: DefaultTheme.SidebarMulti | DefaultTheme.Sidebar = [
     ]
   },
   { text: '了解我们', link: '/about' },
+  { text: '充电相关', link: '/battery' },
+  { text: 'Markdown 语法教学', link: '/markdownExmaple' }
 ]
 
 export default sidebar
