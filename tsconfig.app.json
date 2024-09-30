@@ -11,7 +11,7 @@
     ".vitepress/**/*.js",
     ".vitepress/**/*.vue"
   ],
-  "exclude": ["**/__tests__/*", "vite.config.mts"],
+  "exclude": ["**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",

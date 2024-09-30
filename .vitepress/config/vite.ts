@@ -6,7 +6,7 @@ export default {
     Font.vite({
       scanFiles: {
         // ?subsets 将会匹配 default
-        default: ['docs/**/*.{json,js,jsx,ts,tsx,vue,md}']
+        default: ['**/*.{json,js,jsx,ts,tsx,vue,md}']
       },
       css: {
         fontWeight: false
