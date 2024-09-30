@@ -1,4 +1,4 @@
-import { DefaultTheme } from 'vitepress/theme'
+import type { DefaultTheme } from 'vitepress/theme'
 import { getAnnouncements } from './utils'
 
 const sidebar: DefaultTheme.SidebarMulti | DefaultTheme.Sidebar = [
@@ -11,7 +11,6 @@ const sidebar: DefaultTheme.SidebarMulti | DefaultTheme.Sidebar = [
     ]
   },
   { text: '了解我们', link: '/about' },
-  { text: '充电相关', link: '/battery' }
 ]
 
 export default sidebar

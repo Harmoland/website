@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitepress'
 
-import mdEnhance from './mdEnhance/index'
-
+import mdPlugin from './plugins'
 import nav from './nav'
-import sidebar from './sidebar'
+import sidebar from './sidebars'
+import viteConfig from './vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -47,14 +47,20 @@ export default defineConfig({
     returnToTopLabel: '回到顶部 ▲'
   },
 
+  vite: viteConfig,
+
   markdown: {
     theme: {
       light: 'min-light',
       dark: 'one-dark-pro'
     },
+    image: {
+      lazyLoading: true
+    },
     lineNumbers: true,
-    config: mdEnhance
+    config: mdPlugin
   },
+
   transformHead({ assets }) {
     // adjust the regex accordingly to match your font
     const HarmonySansFile = assets.find(() => /.+\.woff2/)
